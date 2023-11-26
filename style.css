@@ -1,20 +1,45 @@
+html {
+    font-size: 16px;
+}
+
+.svg-logo {
+    height: 3rem;
+    width: 3rem;
+}
+
+.svg-icon {
+    height: 2rem;
+    width: 2rem;
+}
+
 .grid-container {
-    height: 100vh;
-    width: 100vw;
+    height: 98vh;
+    width: 98vw;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
-        "sidebar header header header"
-        "sidebar main main main"
-        "sidebar main main main"
-        "sidebar main main main"
-        "sidebar main main main";
+        "sidebar header header header header"
+        "sidebar main main main main"
+        "sidebar main main main main"
+        "sidebar main main main main"
+        "sidebar main main main main";
 }
 
 .item-side {
     grid-area: sidebar;
     border: solid black;
+}
+
+.side-logo-container {
+    display: grid;
+    grid-template-columns: 3rem auto;
+    align-items: center;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
 }
 
 .item-head {
