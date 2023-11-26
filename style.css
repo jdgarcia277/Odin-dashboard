@@ -12,6 +12,10 @@ html {
     width: 2rem;
 }
 
+.svg-icon, .svg-logo {
+    fill: white;
+}
+
 .grid-container {
     height: 98vh;
     width: 98vw;
@@ -29,12 +33,30 @@ html {
 .item-side {
     grid-area: sidebar;
     border: solid black;
+    background-color: #1992d4;
+    color: white;
 }
 
 .side-logo-container {
     display: grid;
     grid-template-columns: 3rem auto;
     align-items: center;
+}
+
+.side-navigation-container {
+    display: grid;
+    grid-template-columns: 2rem auto;
+    align-items: center;
+}
+
+.side-settings-container {
+    display: grid;
+    grid-template-columns: 2rem auto;
+    align-items: center;
+}
+
+.item-side >div {
+    margin: 0 0 10% 5%;
 }
 
 .icon-container {
