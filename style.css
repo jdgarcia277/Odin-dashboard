@@ -1,5 +1,6 @@
 html {
     font-size: 16px;
+    background-color: #e2e8f0;
 }
 
 .svg-logo {
@@ -7,7 +8,7 @@ html {
     width: 3rem;
 }
 
-.svg-icon {
+.svg-icon, .svg-icon-black {
     height: 2rem;
     width: 2rem;
 }
@@ -18,7 +19,7 @@ html {
 
 .grid-container {
     height: 98vh;
-    width: 98vw;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -32,9 +33,12 @@ html {
 
 .item-side {
     grid-area: sidebar;
-    border: solid black;
     background-color: #1992d4;
     color: white;
+}
+
+.side-logo-container, .side-navigation-container, .side-settings-container {
+    column-gap: 0.5rem;
 }
 
 .side-logo-container {
@@ -66,10 +70,119 @@ html {
 
 .item-head {
     grid-area: header;
-    border: solid black;
+    display: grid;
+    background-color: white;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 50%;
+    box-shadow: 0 1rem 10px #ccd1d8;
+}
+
+.head-toprow {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-areas: 
+        "search-icon bar bar bar bar bar . bell top-logo top-name top-name";
+    align-items: center;
+}
+
+.toprow-search-icon {
+    grid-area: search-icon;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toprow-search-bar {
+    grid-area: bar;
+}
+
+.toprow-search-bar input {
+    width: 100%;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #e2e8f0;
+}
+
+.toprow-alert {
+    grid-area: bell;
+    display: flex;
+    justify-content: center;
+}
+
+.toprow-profile-icon {
+    grid-area: top-logo;
+
+}
+
+.toprow-profile-icon img {
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.toprow-username {
+    grid-area: top-name;
+}
+
+.head-bottomrow {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-areas: 
+        "bottom-icon bottom-name bottom-name bottom-name . . button-new button-upload button-share";
+    align-items: center;
+}
+.head-bottomrow button{
+    font-size: 1.5rem;
+    color: white;
+    background-color: #1992d4;
+    border: none;
+    border-radius: 25px;
+    padding: 5% 20%;
+}
+
+.bottom-icon{
+    grid-area: bottom-icon;
+    display:flex;
+    justify-content: center;
+}
+.bottom-icon img{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+}
+.bottom-name-container{
+    grid-area: bottom-name;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1rem 1fr;
+    grid-template-areas: 
+        "bc-hi . ."
+        "bc-name bc-name bc-user";
+    align-items: center;
+
+}
+
+.bc-hi{
+    grid-area: bc-hi;
+    font-weight: bold;
+}
+.bc-name{
+    grid-area: bc-name;
+}
+.bc-user{
+    grid-area: bc-user;
+}
+.bottom-button-new{
+    grid-area: button-new;
+}
+.bottom-button-upload{
+    grid-area: button-upload;
+}
+.bottom-button-share{
+    grid-area: button-share;
 }
 
 .item-main {
     grid-area: main;
-    border: solid black;
+    background-color: #e2e8f0;
 }
